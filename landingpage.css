@@ -1,0 +1,135 @@
+:root{
+    --heightImg: calc(35vw * 1079 / 1080);
+    --heightImgSmall: calc(60vw * 1079 / 1080);
+    --heightImgSmaller: calc(95vw * 1079 / 1080);
+}
+
+#ContainerLandingPage {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+}
+#ContainerLandingPage>div{
+    display: flex;
+    position: relative;
+    width: 35vw;
+    height: var(--heightImg);
+    background-image: url(./img/1ae0979aa40a5a54031b.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#CancelLandingPage{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 9999;
+}
+#CancelLandingPage img{
+    width: 5%;
+    margin-top: 3%;
+    margin-right: 3%;
+
+    background-color: #eee0e8;
+    padding: 2%;
+    border-radius: 50%;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.3),
+    5px 5px 5px rgba(0, 0, 0, 0.3)
+}
+#MainLandingPage{
+    position: relative;
+}
+#MainLandingPage img{
+    width: 100%;
+}
+#ButtonLandingPage{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 3%;
+    
+    width: 100%;
+    height: 100%;
+
+}
+#ButtonLandingPage img{
+    width: 15%;
+    margin-right: 2%;
+}
+#ButtonLandingPage>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 10%;
+
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+#LogLandingPage, #MessengerLandingPage{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    transition: 0.5s;
+    background-color: #eee0e8;
+    border-color: yellow;
+
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.3),
+    5px 5px 5px rgba(0, 0, 0, 0.3);
+    
+    text-align: center;
+    font-size: 22px;
+}
+#LogLandingPage:hover, #MessengerLandingPage:hover{
+    border-width: 5px;
+}
+
+
+@media (max-width: 1000px){
+    
+    #ContainerLandingPage>div{
+        width: 60vw;
+        height: var(--heightImgSmall);
+    }
+    #CancelLandingPage img{
+        width: 6%;
+        margin-top: 3%;
+        margin-right: 3%;
+    }
+    #LogLandingPage, #MessengerLandingPage{
+        font-size: 18px;
+    }
+}
+@media (max-width: 600px){
+    #ContainerLandingPage>div{
+        width: 95vw;
+        height: var(--heightImgSmaller);
+    }
+    #CancelLandingPage img{
+        width: 8%;
+        margin-top: 3%;
+        margin-right: 3%;
+    }
+    #LogLandingPage, #MessengerLandingPage{
+        font-size: 16px;
+    }
+
+}
